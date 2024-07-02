@@ -1,4 +1,110 @@
-.input{ 
-    display: grid;
-    margin: auto;
+.App {
+    text-align: center;
+    padding: 20px;
 }
+
+form {
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.prompt-list {
+    margin-top: 20px;
+    max-height: 300px; /* Set max height for scrollability */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.prompt-list h2 {
+    margin-bottom: 10px;
+}
+
+.prompt-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.prompt-list li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.bingo-grid {
+    max-width: 100%;
+    margin: 0 auto; /* Center the grid horizontally */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    gap: 10px;
+}
+
+.grid-cell {
+    position: relative;
+    padding-top: 100%; /* Maintain a square shape */
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(206, 178, 53);
+}
+
+.grid-cell p {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: calc(1vw + 1vh + 0.5vmin); /* Responsive font size */
+    word-wrap: break-word; /* Ensure text wraps within the cell */
+    text-align: center; /* Center-align text within the cell */
+}
+
+.empty-cell {
+    width: 100%;
+    height: 100%;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Ensure the grid is responsive */
+@media (max-width: 600px) {
+    .bingo-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 5px;
+    }
+
+    .grid-cell {
+        padding-top: 100%; /* Maintain a square shape */
+    }
+
+    .grid-cell p {
+        font-size: calc(1.5vw + 1.5vh + 0.5vmin); /* Adjust font size for smaller screens */
+    }
+}
+
+
+
+
+
